@@ -140,11 +140,9 @@ section.hero{
     height: 100vh;
     background-position: center;
     background-size: cover;
-    
 }
 
 /*---------about---------- */
-
 section.about{
     padding-inline: 5%;
     padding-block: 100px;
@@ -158,7 +156,7 @@ section.about{
         z-index: -1;
 
         >img{
-            height: 600px;
+            max-height: 500px;
             max-width: 500px;
             border-radius: 25px;
             box-shadow: 0 4px 5px black;
@@ -355,7 +353,7 @@ section.records-count{
 #Features{
     padding: 5%;
     padding-block-start: 100px;
-    background-color: var(--bg2);
+    background-color: var(--bg1);
 
     >section.Features-head{
         text-align: center;
@@ -481,8 +479,9 @@ section.records-count{
 
 /*------Teams-------- */
 #Teams{
-    padding-inline: 5%;
-    padding-block: 80px;
+    padding: 5%;
+    padding-block-start: 100px;
+    background-color: var(--bg2);
 
     >section.team-head{
         text-align: center;
@@ -602,4 +601,34 @@ section.records-count{
     }
 }
 
+/* ---------Reviews------- */
+#Reviews{
+    padding: 5%;
+    padding-block-start: 100px;
+
+    >section.Reviews-head{
+        text-align: center;
+        margin: auto;
+        width: 500px;
+
+        >h6{
+            font-size: 25px;
+            color: var(--brand);
+        }
+
+        >h1{
+            color: white;
+            font-size: 32px;
+            font-style: italic;
+            margin-block: 10px;
+        }
+
+        >p{
+            line-height: 1.8;
+            font-size: 16px;
+            text-align: center;
+            font-style: italic;
+        }
+    }
+}
 

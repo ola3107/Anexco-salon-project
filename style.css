@@ -1,0 +1,532 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg1: #151828;
+    --bg2: #1B1F34;
+    --body: #959DCC;
+    --brand: #FFAB76;
+    --white: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: sans-serif;
+    color: var(--body);
+    background-color: var(--bg1);
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+    padding-top: 20px;
+    position: fixed;
+    width: 100vw;
+    background: linear-gradient(to bottom, #1B1F34, rgba(27, 31, 52, 0.0));
+    
+
+    >h1{
+        font-size: 32px;
+        
+        >span{
+            color: var(--brand);
+        }
+    }
+
+    ul{
+        display: flex;
+        gap: 25px;
+        align-items: center;
+
+        >li{
+            list-style: none;
+
+            >a{
+                text-decoration: none;
+                font-size: 17px;
+                color: var(--brand);
+                transition: all 0.4s ease;
+
+                &:hover{
+                    color: var(--white);
+                }
+            }
+
+            button{
+                padding: 16px 36px;
+                font-family: sans-serif;
+                background-color: transparent;
+                border:1px solid var(--brand);
+                color: var(--brand);
+                transition: all 0.4s ease;
+
+                &:hover{
+                    background-color:var(--brand);
+                    color: var(--bg1);
+                }
+            }
+        }
+    }
+}
+
+/* ---------js class--------- */
+.is-toggled{
+    color: #959DCC;
+}
+
+/* ------hero------- */
+
+section.hero{
+    padding-inline: 5%;
+    padding-block: 220px;
+    
+    >div{
+        width: 600px;
+
+        >h1{
+            font-size: 80px;
+            color: white;
+            
+        }
+
+        >p{
+            margin-top: 24px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        >button{
+            padding: 16px 36px;
+            font-family: sans-serif;
+            font-weight: 700;
+            background-color: var(--brand);
+            border: none;
+            margin-top: 24px;
+            transition: all 0.4s ease;
+
+            &:hover{
+                background-color: transparent;
+                border:1px solid var(--brand);
+                color: var(--brand);
+            }
+        }
+
+        a{
+            display: block;
+            margin-top: 40px;
+            text-decoration: none;
+            color: var(--brand);
+            border-top: 2px solid var(--brand);
+            width: 190px;
+            transition: 0.4s ease;
+
+            &:hover{
+                color: var(--white);
+            }
+        }
+    }
+}
+
+#hero{
+    background: linear-gradient(20deg,#1B1F34, rgba(27, 31, 52, 0.5)), url(./asset/background-image.png.png);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+/*---------about---------- */
+
+section.about{
+    padding-inline: 5%;
+    padding-block: 100px;
+    /* height: 100vh; */
+
+    >div{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: -1;
+
+        >img{
+            height: 600px;
+            width: 500px;
+            border-radius: 25px;
+            box-shadow: 0 4px 5px black;
+
+        }
+
+        div{
+            max-width: 400px;
+            display: flex;
+            margin-top: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;  
+
+            
+            
+             >h6{
+                text-align: center;
+                font-size: 25px;
+                color: var(--brand);
+            }
+
+            >h1{
+                color: white;
+                font-size: 32px;
+                font-style: italic;
+                margin-block: 20px;
+            }
+
+            >p{
+                line-height: 1.8;
+                font-size: 16px;
+                text-align: center;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+/* -------services */
+#services{
+    padding: 5%;
+    padding-block-start: 100px;
+    background-color: var(--bg2);
+
+    >section.services-head{
+        text-align: center;
+        margin: auto;
+        width: 500px;
+
+        >h6{
+            font-size: 25px;
+            color: var(--brand);
+        }
+
+        >h1{
+            color: white;
+            font-size: 32px;
+            font-style: italic;
+            margin-block: 10px;
+        }
+
+        >p{
+            line-height: 1.8;
+            font-size: 16px;
+            text-align: center;
+            font-style: italic;
+        }
+    }
+
+    >section.services-body{
+        margin-block-start: 60px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+
+       >div{
+
+            >img{
+                max-width: 350px;
+            }
+
+            div.content{
+                width: 350px;
+                padding: 32px;
+                text-align: center;
+                line-height: 1.8;
+
+                >h3{
+                    color: var(--white);
+                    font-weight:800 ;
+                }
+
+                >p{
+                    margin-block: 18px;
+                }
+
+                >a{
+                    text-decoration: none;
+                    color: var(--body);
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    left: 1px;
+                    display: inline-flex;
+                    align-items: center;
+                    
+
+                    &:hover{
+                        color: var(--brand);
+                    }
+                    
+                    >.icon{
+                        transition:all 0.4s ease;
+                    }
+
+                    &:hover .icon{
+                        transform: translateX(8px);
+                    }
+                }
+            }
+        }
+    }
+
+    div.buttons{
+        width: 400px;
+        margin: auto;
+        margin-top: 60px;
+
+        >button.btn1{
+            padding: 16px 36px;
+            font-family: sans-serif;
+            transition: all 0.4s ease;
+            background-color: var(--brand);
+            border: none;
+            margin-top: 24px;
+            font-weight: 800;
+            margin-right: 32px;
+
+            &:hover{
+                background-color: transparent;
+                border:1px solid var(--brand);
+                color: var(--brand);
+            }    
+        }
+
+        >button.btn2{
+            padding: 16px 36px;
+            font-family: sans-serif;
+            transition: all 0.4s ease;
+            background-color: transparent;
+            border:1px solid var(--brand);
+            color: var(--brand);
+            font-weight: 800;
+
+            &:hover{
+                background-color:var(--brand);
+                color: var(--bg1);
+            }
+        }
+    }
+}
+
+/* -------records counts-------- */
+
+section.records-count{
+    background: linear-gradient(45deg,#1B1F34, rgba(27, 31, 52, 0.5)), url(./asset/man-cuts-his-beard-barbershop_1157-16081.jpg);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    
+    >div{
+        margin: auto;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+
+        >div{
+            margin-top: 200px;
+            
+            >p{
+                font-size: 20px;
+            }
+
+            h1{
+                font-size: 32px;
+                color: var(--brand);
+            }
+        }
+    }
+}
+
+/* ---------features-------- */
+#Features{
+    padding: 5%;
+    padding-block-start: 100px;
+
+    >section.Features-head{
+        text-align: center;
+        margin: auto;
+        width: 500px;
+
+        >h6{
+            font-size: 25px;
+            color: var(--brand);
+        }
+
+        >h1{
+            color: white;
+            font-size: 32px;
+            font-style: italic;
+            margin-block: 10px;
+        }
+
+        >p{
+            line-height: 1.8;
+            font-size: 16px;
+            text-align: center;
+            font-style: italic;
+        }
+    }
+
+
+    section.Features-body{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: center; 
+
+        >div{
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+           
+
+            >.icon{
+                font-size: 30px;
+                color: var(--brand);
+            }
+
+            div.content{
+                width: 350px;
+                line-height: 1.8;
+
+                >h3{
+                    color: var(--white);
+                    font-weight:800 ;
+                }
+
+                >p{
+                    margin-block: 18px;
+                }
+
+                >a{
+                    text-decoration: none;
+                    color: var(--body);
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    left: 1px;
+                    display: inline-flex;
+                    align-items: center;
+                    
+
+                    &:hover{
+                        color: var(--brand);
+                    }
+                    
+                    >.icon{
+                        transition:all 0.4s ease;
+                    }
+
+                    &:hover .icon{
+                        transform: translateX(8px);
+                    }
+                }
+            }
+        }
+    }
+
+    div.buttons{
+        width: 400px;
+        margin: auto;
+        margin-top: 50px;
+
+        >button.btn1{
+            padding: 16px 36px;
+            font-family: sans-serif;
+            transition: all 0.4s ease;
+            background-color: var(--brand);
+            border: none;
+            margin-top: 24px;
+            font-weight: 800;
+            margin-right: 32px;
+
+            &:hover{
+                background-color: transparent;
+                border:1px solid var(--brand);
+                color: var(--brand);
+            }    
+        }
+
+        >button.btn2{
+            padding: 16px 36px;
+            font-family: sans-serif;
+            transition: all 0.4s ease;
+            background-color: transparent;
+            border:1px solid var(--brand);
+            color: var(--brand);
+            font-weight: 800;
+
+            &:hover{
+                background-color:var(--brand);
+                color: var(--bg1);
+            }
+        }
+    }
+}
+
+/*------Teams-------- */
+#Teams{
+    padding-inline: 5%;
+
+    >div{
+        img{
+            width: 400px;
+            height: 500px;
+        }
+
+        div.content{
+            width: 350px;
+            padding: 32px;
+            text-align: center;
+            line-height: 1.8;
+
+            >h3{
+                color: var(--white);
+                font-weight:800 ;
+            }
+
+            >p{
+                margin-block: 18px;
+            }
+
+            >a{
+                text-decoration: none;
+                color: var(--body);
+                font-weight: 600;
+                text-transform: uppercase;
+                left: 1px;
+                display: inline-flex;
+                align-items: center;
+                
+
+                &:hover{
+                    color: var(--brand);
+                }
+                
+                >.icon{
+                    transition:all 0.4s ease;
+                }
+
+                &:hover .icon{
+                    transform: translateX(8px);
+                }
+            }
+        }    
+    }
+}
+
+

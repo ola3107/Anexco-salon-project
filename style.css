@@ -31,7 +31,6 @@ nav{
     position: fixed;
     width: 100vw;
     background: linear-gradient(to bottom, #1B1F34, rgba(27, 31, 52, 0.0));
-    
 
     >h1{
         font-size: 32px;
@@ -153,7 +152,6 @@ section.about{
         justify-content: space-evenly;
         flex-wrap: wrap;
         position: relative;
-        z-index: -1;
 
         >img{
             max-height: 500px;
@@ -751,6 +749,82 @@ section.records-count{
             &:hover{
                 background-color:var(--brand);
                 color: var(--bg1);
+            }
+        }
+    }
+}
+
+section.Bookings{
+    background: linear-gradient(45deg,#1B1F34, rgba(27, 31, 52, 0.5)), url(./asset/man-cuts-his-beard-barbershop_1157-16081.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-block: 80px;
+
+    >div.Appointment{
+        width: 600px;
+        margin: auto;
+
+        form{
+            background-color: var(--bg2);
+            padding: 25px;
+            text-align: center;
+            
+            div{
+                line-height: 1.5;
+
+                h1{
+                    font-size: 30px;
+                    color: var(--white);
+                }
+
+                h5{
+                    color: var(--white);
+                    font-style: italic;
+                    margin-bottom: 10px;
+                }
+            }
+
+            input{
+                width: 80%;
+                padding: 10px;
+                border: none;
+                margin-top: 10px;
+                background-color: var(--bg1);
+                color: var(--white);
+                border-radius: 10px;
+            }
+
+            textarea{
+                width: 80%;
+                height: 60px;
+                margin-top: 10px;
+                background-color: var(--bg1);
+                color: var(--white);
+                border: none;
+                border-radius: 10px;
+            }
+
+            input textarea:focus{
+                border-left: 3px solid var(--brand);
+                box-shadow: none;
+            }
+
+            button{
+                padding: 8px 80px;
+                font-family: sans-serif;
+                transition: all 0.4s ease;
+                background-color: var(--brand);
+                border: none;
+                margin-top: 10px;
+                font-weight: 800;
+                margin-right: 32px;
+                border-radius: 10px;
+
+                &:hover{
+                    background-color: transparent;
+                    border:1px solid var(--brand);
+                    color: var(--brand);
+                }
             }
         }
     }

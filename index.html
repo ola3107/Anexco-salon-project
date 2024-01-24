@@ -15,26 +15,56 @@
         <nav>
             <h1 class="logo">ANEX<span>CO.</span></h1>
 
-            <ul>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><i class="ri-close-fill"></i> </li>
                 <li><a href="#Home" class="Home" onclick="
-                    function1('.Home')
+                    function1('.Home');
+                    hideSidebar();
                 ">Home</a></li>
                 <li><a href="#about" class="About" onclick="
-                    function1('.About')
+                    function1('.About');
+                    hideSidebar();
                 ">About</a></li>
                 <li><a href="#services" class="services" onclick="
-                    function1('.services')
+                    function1('.services');
+                    hideSidebar();
                 ">Services</a></li>
                 <li><a href="#Features" class="Features" onclick="
                     function1('.Features')
+                    hideSidebar();
                 ">Features</a></li>
                 <li><a href="#Teams" class="Teams" onclick="
-                    function1('.Teams')
+                    function1('.Teams');
+                    hideSidebar();
                 ">Teams</a></li>
                 <li><a href="#Reviews" class="Reviews" onclick="
-                    function1('.Reviews')
+                    function1('.Reviews');
+                    hideSidebar();
                 ">Reviews</a></li>
                 <li><button>Get Started</button></li>
+            </ul>
+
+            <ul>
+                <li class="hideOnMobile"><a href="#Home" class="Home" onclick="
+                    function1('.Home')
+                ">Home</a></li>
+                <li class="hideOnMobile"><a href="#about" class="About" onclick="
+                    function1('.About')
+                ">About</a></li>
+                <li class="hideOnMobile"><a href="#services" class="services" onclick="
+                    function1('.services')
+                ">Services</a></li>
+                <li class="hideOnMobile"><a href="#Features" class="Features" onclick="
+                    function1('.Features')
+                ">Features</a></li>
+                <li class="hideOnMobile"><a href="#Teams" class="Teams" onclick="
+                    function1('.Teams')
+                ">Teams</a></li>
+                <li class="hideOnMobile"><a href="#Reviews" class="Reviews" onclick="
+                    function1('.Reviews')
+                ">Reviews</a></li>
+                <li class="hideOnMobile"><button>Get Started</button></li>
+                <li class="menu-btn" onclick="showSidebar()"><i class="ri-menu-line"></i></li>
             </ul>
         </nav>
     </header>
@@ -383,16 +413,52 @@
     </div>
 </section>
 
+<!---------footer-------  -->
 <footer>
-    <div class="socials">
-        <h1>ANEX<span>CO.</span></h1>
-        <a href=""><i class="ri-facebook-circle-fill"></i></a>
-        <a href=""><i class="ri-twitter-x-fill"></i></a>
-        <a href=""><i class="ri-whatsapp-fill"></i></a>
-        <a href=""><i class="ri-instagram-fill"></i></a>
+    <div class="footer-top">
+        <div class="socials">
+            <h1>ANEX<span>CO.</span></h1>
+            <h5>We provides various quality services ranging from Lorem ipsum dolor sit  unde, illo consequuntur magni, quia placeat temporibus neque.</h5>
+            <a href=""><i class="ri-facebook-circle-fill"></i></a>
+            <a href=""><i class="ri-twitter-x-fill"></i></a>
+            <a href=""><i class="ri-whatsapp-fill"></i></a>
+            <a href=""><i class="ri-instagram-fill"></i></a>
+        </div>
+
+        <div class="workings">
+            <h4>Working Hours</h4>
+            <div class="open">
+                <h6>Monday - Saturday</h6>
+                <p>9:00am - 9:00pm</p>
+            </div>
+            <div class="open">
+                <h6>Sunday</h6>
+                <p>We're closed</p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h4>Contacts</h4>
+            <p>
+                <i class="ri-map-pin-fill"></i>
+                <a href="">38 NTA Apara Link Road Port Harcourt 500272 Rivers Nigeria</a>
+            </p>
+
+            <p>
+                <i class="ri-mail-fill"></i>
+                <a href="">anexcoworld@gmail.com</a>
+            </p>
+            <p>
+                <i class="ri-phone-fill"></i>
+                <a href="">+234 814 597 5142</a>
+            </p>
+        </div>
     </div>
 
-    div
+    <div class="footer-bottom">
+        <p>&copy; 2023 Anexco. All rights reserved.</p>
+        <p>Design with <i class="ri-service-fill"></i> by<a href=""> Olasunkanmi</a></p>
+    </div>
 </footer>
     
 
@@ -422,6 +488,16 @@
             if(turnOff){
                 turnOff.classList.remove('is-toggled')
             }
+        }
+
+        function showSidebar(){
+            let sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(){
+            let sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none'
         }
     </script>
 </body>

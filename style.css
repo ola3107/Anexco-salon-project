@@ -20,17 +20,18 @@ body{
     font-family: sans-serif;
     color: var(--body);
     background-color: var(--bg1);
+    
 }
-
 
 nav{
     display: flex;
     justify-content: space-between;
-    padding-inline: 5%;
-    padding-top: 20px;
+    align-items: center;
+    padding:1.3rem 5%;
     position: fixed;
     width: 100vw;
     background: linear-gradient(to bottom, #1B1F34, rgba(27, 31, 52, 0.0));
+    z-index: 1000;
 
     >h1{
         font-size: 32px;
@@ -40,10 +41,43 @@ nav{
         }
     }
 
+    .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(27, 31, 52, 0.1);;
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 20px rgba(0,0,0,0.2);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px;
+
+        li{
+            width: 100%;
+
+            a{
+                width: 100%;
+            }
+
+            i{
+                font-size: 26px;
+                color: var(--brand);
+                cursor: pointer;
+            }
+        }
+    }
+
+    
     ul{
         display: flex;
         gap: 25px;
         align-items: center;
+        flex-wrap: wrap;
 
         >li{
             list-style: none;
@@ -72,6 +106,16 @@ nav{
                     color: var(--bg1);
                 }
             }
+
+            i{
+                font-size: 26px;
+                color: var(--brand);
+                cursor: pointer;
+            }
+        }
+
+        .menu-btn{
+            display: none;
         }
     }
 }
@@ -86,6 +130,11 @@ nav{
 section.hero{
     padding-inline: 5%;
     padding-block: 220px;
+    background: linear-gradient(20deg,#1B1F34, rgba(27, 31, 52, 0.5)), url(./asset/background-image.png.png);
+    height: 100vh;
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
     
     >div{
         width: 600px;
@@ -134,18 +183,11 @@ section.hero{
     }
 }
 
-#hero{
-    background: linear-gradient(20deg,#1B1F34, rgba(27, 31, 52, 0.5)), url(./asset/background-image.png.png);
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-}
-
 /*---------about---------- */
 section.about{
     padding-inline: 5%;
     padding-block: 100px;
-    /* height: 100vh; */
+    
 
     >div{
         display: flex;
@@ -327,13 +369,16 @@ section.records-count{
     background-size: cover;
     
     >div{
-        margin: auto;
         display: flex;
         text-align: center;
-        justify-content: space-evenly;
+        height: 400px;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-between;
+        
+    
 
         >div{
-            margin-top: 200px;
             
             >p{
                 font-size: 20px;
@@ -758,10 +803,10 @@ section.Bookings{
     background: linear-gradient(45deg,#1B1F34, rgba(27, 31, 52, 0.5)), url(./asset/man-cuts-his-beard-barbershop_1157-16081.jpg);
     background-position: center;
     background-size: cover;
-    padding-block: 80px;
+    padding: 80px 20px;
 
     >div.Appointment{
-        width: 600px;
+        max-width: 600px;
         margin: auto;
 
         form{
@@ -778,35 +823,40 @@ section.Bookings{
                 }
 
                 h5{
-                    color: var(--white);
                     font-style: italic;
                     margin-bottom: 10px;
                 }
             }
 
             input{
-                width: 80%;
+                width: 90%;
+                text-align: center;
                 padding: 10px;
                 border: none;
                 margin-top: 10px;
                 background-color: var(--bg1);
                 color: var(--white);
                 border-radius: 10px;
+
+                &:focus{
+                    border-left: 3px solid var(--brand);
+                    box-shadow: none;
+                }
             }
 
             textarea{
-                width: 80%;
+                width: 90%;
                 height: 60px;
                 margin-top: 10px;
                 background-color: var(--bg1);
                 color: var(--white);
                 border: none;
                 border-radius: 10px;
-            }
 
-            input textarea:focus{
-                border-left: 3px solid var(--brand);
-                box-shadow: none;
+                &:focus{
+                    border-left: 3px solid var(--brand);
+                    box-shadow: none;
+                }
             }
 
             button{
@@ -817,7 +867,6 @@ section.Bookings{
                 border: none;
                 margin-top: 10px;
                 font-weight: 800;
-                margin-right: 32px;
                 border-radius: 10px;
 
                 &:hover{
@@ -829,4 +878,155 @@ section.Bookings{
         }
     }
 }
+
+/*---------footer---------*/
+footer{
+    padding-inline: 5%;
+    padding-block-start: 30px;
+    background-color: var(--bg2);
+
+    >div.footer-top{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        text-align: center;
+
+        >div.socials{
+            max-width: 350px;
+            margin-top: 20px;
+
+            h1{
+                color: var(--white);
+                font-size: 32px;
+                font-style: italic;
+                margin-block: 20px;
+
+                span{
+                    color: var(--brand);
+                }
+            }
+
+            h5{
+                color: var(--body);
+                font-style: italic;
+                margin-block: 20px;
+            }
+
+            a{
+                background-color: var(--bg2);
+                text-decoration: none;
+                margin-inline: 5px;
+                font-size: 20px;
+                color: var(--body);
+                transition: all 0.4s ease;
+    
+                &:hover{
+                    background-color: var(--brand);
+                    padding: 5px 10px;
+                    color: var(--bg1);
+                    transform: translateX(8px);
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        div.workings{
+            max-width: 350px;
+            margin-top: 10px;
+            h4{
+                color: var(--brand);
+                font-size: 25px;
+                margin-block: 20px;
+    
+            }
+    
+            div.open{
+                margin-top: 10px;
+    
+                h6{
+                    color: var(--white);
+                    font-style: italic;
+                    font-size: 20px;
+                }
+            }
+    
+            p{
+                color: var(--body);
+                font-style: italic;
+            }
+        }
+
+        div.contact{
+            max-width: 350px;
+            margin-top: 10px;
+    
+            h4{
+                color: var(--brand);
+                font-size: 25px;
+                margin-block: 10px;
+    
+            }
+    
+            p{
+                color: var(--body);
+                font-style: italic;
+                margin-top: 10px;
+
+                i{
+                    margin-right: 10px;
+                    color: var(--body);
+                }
+
+                a{
+                    color: var(--body);
+                    transition: all 0.4s ease;
+
+                    &:hover{
+                        color: var(--brand);
+                    }
+                }
+            }
+        }
+    }
+
+    >div.footer-bottom{
+        margin-top: 50px;
+        text-align: center;
+        color: var(--body);
+        font-style: italic;
+        font-size: 15px;
+        background-color: var(--bg1);
+
+        p{
+            margin-top: 10px;
+
+            i{
+                color: red;
+            }
+
+            a{
+                color: var(--body);
+                transition: all 0.4s ease;
+
+                &:hover{
+                    color: var(--brand);}
+            }        
+        }
+    }
+}
+
+/*--------breakpoint------- */
+@media (max-width: 893px) {
+    .hideOnMobile{
+        display: none;
+    }
+
+    nav ul .menu-btn{
+        display: block;
+        font-size: 26px;
+        color: var(--brand);
+        cursor: pointer;
+    }
+}
+
 

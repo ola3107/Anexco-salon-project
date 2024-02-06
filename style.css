@@ -16,10 +16,6 @@ html{
     scroll-behavior: smooth;
 }
 
-section{
-    
-}
-
 body{
     font-family: sans-serif;
     color: var(--body);
@@ -1106,11 +1102,6 @@ footer{
             background-color: white;
         }
     }
-
-
-
-
-
 
 }
 
